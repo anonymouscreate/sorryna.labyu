@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry, Love</title>
+    <style>
+        body {
+            font-family: "Comic Sans MS", cursive, sans-serif; /* Cute and romantic font */
+            background-color: #ffd1dc; /* Light pink background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            color: #ff6b81; /* A romantic color for the title */
+            margin-top: 50px;
+        }
+        img {
+            width: 200px;
+            margin: 20px auto;
+        }
+        .photo {
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        /* Hide audio player controls */
+        audio {
+            display: none;
+        }
+        /* Style for the play button */
+        .play-button {
+            background-color: #ff6b81;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .play-button:hover {
+            background-color: #ff4e6a;
+        }
+    </style>
+</head>
+<body>
+    <h1>I'm Sorry, Love</h1>
+    <img class="photo" src="images/photo.jpg" alt="Your Photo">
+    <img class="gif" src="images/ted.gif" alt="Teddy Bear Offering Heart">
+
+    <!-- Hidden audio player -->
+    <audio id="audioPlayer" loop>
+        <source src="audio/bg.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Play button to trigger the audio -->
+    <button class="play-button" onclick="playAudio()">Play Me</button>
+
+    <script>
+        // Function to start audio when the button is clicked
+        function playAudio() {
+            var audio = document.getElementById('audioPlayer');
+            audio.play(); // Start playing the audio
+        }
+    </script>
+</body>
+</html>
